@@ -256,6 +256,38 @@ header {
     color: var(--text-muted);
 }
 
+/* Biography Details Grid */
+.bio-details {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border-color); /* Separator line from the paragraph */
+}
+
+.bio-item {
+    font-size: 15px;
+    color: var(--text-muted);
+}
+
+.bio-item strong {
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+/* Use your custom Soft Gold palette for the bio icons */
+.bio-item i {
+    color: var(--color-2); 
+    margin-right: 8px;
+    font-size: 14px;
+}
+
+.bio-item span {
+    color: var(--text-muted);
+    margin-left: 4px;
+}
+
 /* Force the education container to also sit on the right side (Column 2), neatly stacking under the text */
 .about-education {
     grid-column: 2;
@@ -307,8 +339,9 @@ header {
 /* Projects Cards */
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(2, 1fr); /* Fixed syntax error */
+    gap: 25px;
+    width: 100%;
 }
 
 .project-card {
@@ -318,6 +351,10 @@ header {
     overflow: hidden;
     box-shadow: var(--shadow);
     transition: var(--transition);
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .project-card:hover {
@@ -327,6 +364,9 @@ header {
 
 .project-info {
     padding: 25px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .proj-tag {
@@ -345,6 +385,14 @@ header {
     padding: 3px 8px;
     border-radius: 4px;
     color: var(--text-color);
+}
+
+.tech-used {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: auto; 
+    padding-top: 15px;
 }
 
 /* Contact Details */
@@ -427,41 +475,12 @@ footer {
     .about-profile, .about-text, .about-education {
         grid-column: 1;
     }
+    .projects-grid {
+        grid-template-columns: 1fr; /* Fixed unclosed brackets issue */
+    }
     .section {
         height: auto;
         padding: 80px 0;
     }
     .hamburger { display: block; }
-}
-
-/* Biography Details Grid */
-.bio-details {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 15px;
-    margin-top: 25px;
-    padding-top: 20px;
-    border-top: 1px solid var(--border-color); /* Separator line from the paragraph */
-}
-
-.bio-item {
-    font-size: 15px;
-    color: var(--text-muted);
-}
-
-.bio-item strong {
-    color: var(--text-color);
-    font-weight: 600;
-}
-
-/* Use your custom Soft Gold palette for the bio icons */
-.bio-item i {
-    color: var(--color-2); 
-    margin-right: 8px;
-    font-size: 14px;
-}
-
-.bio-item span {
-    color: var(--text-muted);
-    margin-left: 4px;
 }
