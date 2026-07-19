@@ -16,7 +16,7 @@
     --transition: all 0.6s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
-/* Enable Seamless Scroll Snapping across the site */
+/* Scrolling across the site */
 html {
     scroll-behavior: smooth;
     scroll-snap-type: y mandatory; /* Snaps sections vertically */
@@ -41,6 +41,12 @@ body {
     margin: 0 auto;
     padding: 0 20px;
 }
+
+
+
+
+
+
 
 /* Header & Navigation */
 header {
@@ -213,6 +219,16 @@ header {
     letter-spacing: 1px;
 }
 
+
+
+
+
+
+
+
+
+
+
 /* About Section Layout */
 .about-grid {
     display: grid;
@@ -228,7 +244,7 @@ header {
     justify-content: center;
 }
 
-/* Circular Profile Image with Glowing Pastel Border */
+/*Profile Image */
 .profile-img {
     width: 220px;
     height: 220px;
@@ -308,11 +324,22 @@ header {
     font-weight: bold;
 }
 
+
+
+
+
+
+
+
+
+
+
 /* Skills Cards */
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     gap: 25px;
+	width: 100%;
 }
 
 .skill-card {
@@ -323,6 +350,10 @@ header {
     text-align: center;
     box-shadow: var(--shadow);
     transition: var(--transition);
+	
+	display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .skill-card:hover {
@@ -336,10 +367,20 @@ header {
     margin-bottom: 15px;
 }
 
+
+
+
+
+
+
+
+
+
+
 /* Projects Cards */
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Fixed syntax error */
+    grid-template-columns: repeat(2, 1fr); 
     gap: 25px;
     width: 100%;
 }
@@ -395,6 +436,15 @@ header {
     padding-top: 15px;
 }
 
+
+
+
+
+
+
+
+
+
 /* Contact Details */
 .contact-subtitle {
     text-align: center;
@@ -429,6 +479,16 @@ header {
     color: var(--color-1);
 }
 
+
+
+
+
+
+
+
+
+
+
 /* Footer styling */
 footer {
     position: absolute;
@@ -441,9 +501,6 @@ footer {
     color: var(--text-muted);
 }
 
-/* ==========================================================
-   GLIDE UP SCROLL REVEAL ANIMATIONS
-   ========================================================== */
 
 /* State of elements before entering the viewport */
 .glide-reveal {
@@ -463,6 +520,14 @@ footer {
 .delay-1 { transition-delay: 0.1s; }
 .delay-2 { transition-delay: 0.2s; }
 .delay-3 { transition-delay: 0.3s; }
+
+
+
+
+
+
+
+
 
 /* Mobile Adjustments */
 @media (max-width: 768px) {
