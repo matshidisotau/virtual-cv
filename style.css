@@ -47,7 +47,6 @@ body {
 
 
 
-
 /* Header & Navigation */
 header {
     position: fixed;
@@ -132,21 +131,21 @@ header {
 
 /* Full screen Sections with Scroll Snapping */
 .section, .hero {
-    height: 100vh;
+    min-height: 100vh;
     min-height: 650px;
     display: flex;
     align-items: center;
     justify-content: center;
-    scroll-snap-align: start; /* Locks section to viewport */
+    scroll-snap-align: start;
     position: relative;
     box-sizing: border-box;
+	padding: 100px 0;
     overflow: hidden;
 }
 
 /* Hero Section style adjustments */
 .hero {
-    background: radial-gradient(circle at top right, rgba(228, 156, 230, 0.15), transparent),
-                radial-gradient(circle at bottom left, rgba(156, 230, 228, 0.1), transparent);
+    height: 100vh;
 }
 
 .hero-content h1 {
