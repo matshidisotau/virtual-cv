@@ -34,22 +34,19 @@ window.addEventListener("scroll", () => {
     });
 });
 
-/* ==========================================================
-   GLIDE UP INTERSECTION OBSERVER
-   ========================================================== */
+/*GLIDE UP INTERSECTION OBSERVER */
 const revealCallback = (entries, observer) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.classList.add('active');
-            // Stop observing once the element has glided into place
             observer.unobserve(entry.target);
         }
     });
 };
 
 const revealOptions = {
-    root: null, // relative to viewport
-    threshold: 0.15 // triggers when 15% of the element is visible
+    root: null, 
+    threshold: 0.15 
 };
 
 const observer = new IntersectionObserver(revealCallback, revealOptions);
